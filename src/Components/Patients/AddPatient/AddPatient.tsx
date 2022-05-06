@@ -36,7 +36,7 @@ const CREATE_PATIENT_MUTATION = gql`
 `;
 
 const AddPatient: React.FC<{ onAddData: () => void }> = (props) => {
-  
+
   const [patientState, setPatientState] = useState<{
     patientname: string;
     dateofbirth: string;
@@ -55,7 +55,7 @@ const AddPatient: React.FC<{ onAddData: () => void }> = (props) => {
     weight: "",
   });
 
-  const [createPatientCallback, { error, loading, data:Pdata }] = useMutation(
+  const [createPatientCallback, { error, loading, data: Pdata }] = useMutation(
     CREATE_PATIENT_MUTATION,
     {
       variables: {
@@ -82,14 +82,14 @@ const AddPatient: React.FC<{ onAddData: () => void }> = (props) => {
         height: patientState.height,
         weight: patientState.weight,
       },
-    }).then(res =>{
+    }).then(res => {
       history.replace("/")
       alert("Patient's Details is Added successfully!")
       window.location.reload();
-    }).catch(err=>{
+    }).catch(err => {
       alert("Enter Data in the Fields")
     })
- };
+  };
 
   const patientnameChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (
     event
@@ -151,7 +151,7 @@ const AddPatient: React.FC<{ onAddData: () => void }> = (props) => {
         </div>
         <form>
           <label htmlFor="patientname" className="font-weight-bold">
-            Patient Name 
+            Patient Name
           </label>
           <input
             type="text"
@@ -246,16 +246,17 @@ const AddPatient: React.FC<{ onAddData: () => void }> = (props) => {
 
           <br />
 
-          <button className="btn btn-success" onClick={createPatientHandler}>
+          <button className="btn btn-outline-primary" onClick={createPatientHandler}>
             Create New Patient
           </button>
           <button
-            className="btn btn-danger offset-1"
+            className="btn btn-outline-primary offset-1"
             onClick={() => history.push("/")}
           >
             Cancel
           </button>
         </form>
+        <hr />
         {Pdata}
       </div>
     </div>

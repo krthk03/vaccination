@@ -13,8 +13,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <Fragment>
-      <div className="container">
+      <div>
         <Header />
+        <hr />
       </div>
 
       <div className="container">

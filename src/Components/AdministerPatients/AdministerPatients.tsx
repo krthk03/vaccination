@@ -23,12 +23,12 @@ const AdministerPatients = () => {
   return (
     <div className="row">
       <div className="col-6 offset-3">
-        <button className='btn btn-primary btn-block offset-2 col-7' onClick={() => setShowForm(!showForm)}>
+        <button className='btn btn-outline-primary btn-block offset-2 col-7' onClick={() => setShowForm(!showForm)}>
           {showForm ? 'Hide Form' : 'Show Form'}
         </button>
         <hr />
         {showForm && <AddAdministerPatient onAddData={onAddData} />}
-        <hr/>
+        <hr />
       </div>
       <div className="col-12">
         <AdministerPatientCard />
