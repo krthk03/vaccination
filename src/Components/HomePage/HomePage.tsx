@@ -6,7 +6,7 @@ const HomePage = () => {
             <div className="card bg-dark">
                 <br />
                 <p className="display-4 text-center font-weight-bold" style={{ color: "greenyellow" }}>VACCINATION</p>
-                <h4 className="text-white text-center">Trust science, help each other, respect the rules, and get Vaccinated.</h4>
+                <h4 className="text-white text-center">Trust science, help each other, respect the rules, and get Vaccinated !!</h4>
                 <br />
                 <div className="row text-center">
                     <div className="row col-8 offset-3">
