@@ -7,7 +7,7 @@ import Header from './Components/Header/Header';
 import HomePage from './Components/HomePage/HomePage';
 
 const client = new ApolloClient({
-  uri: "https://vaccination-node-gql.herokuapp.com/",
+  uri: "https://vaccination-node-gql.herokuapp.com/gq",
   cache: new InMemoryCache()
 })
 function App() {
